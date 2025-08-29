@@ -379,7 +379,7 @@ body {
 
     .cv-container {
         margin: 5px auto;
-        grid-template-columns: 130px 170px 190px;
+        grid-template-columns: 130px 150px 210px;
         /* Columnas con tamaños específicos */
         gap: 0;
         min-height: auto;
