@@ -390,19 +390,19 @@ body {
         overflow-wrap: break-word;
         hyphens: auto;
     }
-    
+
     body {
         padding: 2px;
         margin: 0;
         overflow-x: auto;
     }
-    
+
     .left-column,
     .right-column-1,
     .right-column-2 {
         overflow: hidden;
     }
-    
+
     .contact-info p,
     .summary,
     .skills-list li,
@@ -545,13 +545,13 @@ body {
 
     .cv-container {
         margin: 2px auto;
-        grid-template-columns: 120px 135px 135px;
+        grid-template-columns: 100px 150px 160px;
         gap: 0;
         min-height: auto;
         max-width: none;
         width: calc(100vw - 4px);
         height: auto;
-        min-width: 390px;
+        min-width: 410px;
         overflow-x: visible;
     }
 
@@ -563,15 +563,15 @@ body {
 
     .right-column-1,
     .right-column-2 {
-        padding: 12px 8px;
+        padding: 15px 12px;
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
 
     .photo-placeholder {
-        width: 100px;
-        height: 100px;
-        font-size: 12px;
+        width: 80px;
+        height: 80px;
+        font-size: 11px;
     }
 
     .cv-title {
