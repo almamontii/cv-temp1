@@ -16,6 +16,8 @@ body {
     font-weight: 400;
     min-height: 100vh;
     padding: 20px;
+    margin: 0;
+    overflow-x: auto;
 }
 
 /* Contenedor principal - Tamaño optimizado para cada dispositivo */
@@ -35,6 +37,14 @@ body {
     border-radius: 2px;
     position: relative;
     overflow: hidden;
+}
+
+/* Asegurar que el contenido no se desborde en móvil */
+@media (max-width: 768px) {
+    .cv-container {
+        overflow-x: auto;
+        min-width: 390px;
+    }
 }
 
 .cv-container::before {
@@ -373,6 +383,39 @@ body {
 
 /* ===== MEDIA QUERIES MEJORADAS PARA MÓVILES ===== */
 
+/* Estilos generales para móvil */
+@media (max-width: 768px) {
+    * {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    body {
+        padding: 2px;
+        margin: 0;
+        overflow-x: auto;
+    }
+    
+    .left-column,
+    .right-column-1,
+    .right-column-2 {
+        overflow: hidden;
+    }
+    
+    .contact-info p,
+    .summary,
+    .skills-list li,
+    .interests-list li,
+    .work-item .company,
+    .education-item .institution,
+    .exhibition-item .title,
+    .exhibition-item .location {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
 /* Teléfonos muy pequeños (iPhone SE, etc.) */
 @media (max-width: 375px) {
     body {
@@ -496,26 +539,33 @@ body {
 /* Teléfonos pequeños (iPhone 12, 13, etc.) */
 @media (min-width: 376px) and (max-width: 414px) {
     body {
-        padding: 3px;
+        padding: 2px;
+        margin: 0;
     }
 
     .cv-container {
-        margin: 3px auto;
-        grid-template-columns: 140px 150px 220px;
+        margin: 2px auto;
+        grid-template-columns: 120px 135px 135px;
         gap: 0;
         min-height: auto;
         max-width: none;
-        width: 100%;
-        height: 100vh;
+        width: calc(100vw - 4px);
+        height: auto;
+        min-width: 390px;
+        overflow-x: visible;
     }
 
     .left-column {
-        padding: 12px 8px;
+        padding: 10px 6px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .right-column-1,
     .right-column-2 {
-        padding: 15px 12px;
+        padding: 12px 8px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .photo-placeholder {
